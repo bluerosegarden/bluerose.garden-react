@@ -96,7 +96,7 @@ className="relative px-10 lg:px-40 top-40 px-40 leading-5 text-xl/7  snap-always
     </div>
     <div className=" flex flex-row gap-2 justify-center content-center order-first lg:order-none mb-5">
         <ButtonLink icon="github" link="https://github.com/bluerosegarden"/>
-        <ButtonLink icon="email" link="mailto:contact@bluerose.garden"/>
+        <ButtonLink icon="email" link="mailto:mail@bluerose.garden"/>
     </div>
   </div>
 
