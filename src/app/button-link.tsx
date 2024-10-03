@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react';
 
 export default function ButtonLink(props){
 
-let prof_icons: {[id: string]:string} = {
+const prof_icons: {[id: string]:string} = {
     "github":"ant-design:github-filled",
     "email":"streamline:mail-send-envelope-solid",
     }

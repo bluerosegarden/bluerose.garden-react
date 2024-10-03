@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react';
 
 function Proficiency(props){
 
-let prof_icons: {[id: string]:string} = {
+const prof_icons: {[id: string]:string} = {
     "html":"ph:file-html-fill",
     "css":"ph:file-css-fill",
     "linux":"mingcute:linux-fill",
@@ -34,7 +34,7 @@ return (
 
 
 export default function Proficiencies(){
-let proficiencies = [
+const proficiencies = [
   "html",
   "css",
   "linux",
@@ -58,7 +58,8 @@ return (
         ))}
         </div>
     <div className="mt-10 mx-5 text-center lg:text-left">
-        <p className="lg:text-2xl"> Here's a small list of things I'm proficient in!</p>
+        <p className="lg:text-2xl"> Here&apos;s a small list of things I&apos;m proficient in!</p>
+
     </div>
 
     </div>

@@ -1,23 +1,9 @@
-import Image from "next/image";
 import { Icon } from '@iconify/react';
 
 import Proficiencies from "./proficiencies";
 import ButtonLink from "./button-link";
 import HeadingWithBorder from "./HeadingWithBorder";
 
-
-let proficiencies = [
-  "html",
-  "css",
-  "linux",
-  "rust",
-  "python",
-  "git",
-  "javascript",
-  "webserver",
-  "c++",
- // "",
-];
 
 
 export default function Home() {
