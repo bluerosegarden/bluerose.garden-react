@@ -16,8 +16,8 @@ function Heading({heading_size, heading_text_classes, text}: {heading_size: stri
 
 export default function HeadingWithBorder({color, heading_size, text}:{color:string, heading_size: string, text:string}){
 
- let border_line_classes: string = "h-2 rounded justify-self-center self-center";
-    let heading_text_classes: string = "text-center font-bold my-5 lg:my-0 justify-self-center mx-4";
+ let border_line_classes: string = "h-2 rounded justify-self-center self-center ";
+    let heading_text_classes: string = "text-center font-bold my-5 lg:my-0 justify-self-center md:mx-4";
 
     switch (color){
         case "blue":
@@ -45,11 +45,11 @@ export default function HeadingWithBorder({color, heading_size, text}:{color:str
     switch (heading_size){
         case "h2":
             heading_text_classes += " text-4xl"
-            border_line_classes += " w-3/6"
+            border_line_classes += " lg:w-3/6 w-5/6"
             break;
         case "h3":
             heading_text_classes += " text-3xl"
-            border_line_classes += " w-2/6"
+            border_line_classes += " lg:w-2/6 w-4/6"
             break;
     }
 

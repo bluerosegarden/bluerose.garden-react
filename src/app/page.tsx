@@ -21,6 +21,7 @@ export default function Home() {
         <img
           src="img/rose3.svg"
           className=" w-3/12 md:w-[12rem] inline text-right md:mb-4 mb-8 order-first md:order-none"
+    alt=""
         />
       </div>
       <div className="h-2 bg-magic my-1 rounded w-5/6 lg:w-6/6 self-center" />
@@ -55,7 +56,7 @@ export default function Home() {
       <ol className="font-bold gap-8 flex flex-col sm:flex-row navigate justify-center text-lg sm:text-2xl mt-10">
         <li>
           <a
-            className="rounded-full text-white bg-magic hover:border-magic hover:border-4 hover:text-magic hover:bg-transparent p-3 transition-all hover:ease-in-out hover:text-lg"
+            className="rounded-full text-white bg-magic hover:border-magic hover:border-4 hover:text-magic hover:bg-transparent p-3 transition-all hover:ease-in-out hover:text-3xl"
             href="https://flowerbed.bluerose.garden/"
           >
             Digital Garden
@@ -63,7 +64,7 @@ export default function Home() {
         </li>
         <li>
           <a
-            className="rounded-full text-white bg-magic hover:border-magic hover:border-4 hover:text-magic hover:bg-transparent p-3 transition-all hover:ease-in-out hover:text-lg"
+            className="rounded-full text-white bg-magic hover:border-magic hover:border-4 hover:text-magic hover:bg-transparent p-3 transition-all hover:ease-in-out hover:text-3xl"
             href="https://bookmarks.bluerose.garden/"
           >
             Bookmarks
@@ -73,7 +74,7 @@ export default function Home() {
     </div>
   </div>
 <div
-className="relative px-10 lg:px-40 top-40 px-40 leading-5 text-xl/7  snap-always snap-start pt-8 min-h-screen"
+className="relative px-10 lg:px-40 top-40  leading-5 text-xl/7  snap-always snap-start pt-8 min-h-screen"
     id="about"
 >
  <HeadingWithBorder color="rose" text="About" heading_size="h2"/>
@@ -103,7 +104,7 @@ className="relative px-10 lg:px-40 top-40 px-40 leading-5 text-xl/7  snap-always
   </div>
 
   <div
-    className="relative px-10 lg:px-40 top-40 px-40 leading-5 text-xl/7  snap-always snap-start pt-8 min-h-screen"
+    className="relative px-10 lg:px-40 top-40 leading-5 text-xl/7  snap-always snap-start pt-8 min-h-screen"
     id="portfolio"
   >
       <HeadingWithBorder color="rose" text="Portfolio" heading_size="h2"/>
@@ -112,29 +113,25 @@ className="relative px-10 lg:px-40 top-40 px-40 leading-5 text-xl/7  snap-always
       <Proficiencies />
 
 <HeadingWithBorder color="rose" text="Projects" heading_size="h3"/>
-        <div className="text-blue text-xl stroke-blue flex flex-col md:flex-row justify-center align-items-center">
+  <div className="text-blue text-xl stroke-blue flex flex-col md:flex-row justify-center items-center">
+
       <Icon icon="maki:construction" width="60" />
+
       <p className="inline font-bold text-3xl self-center text-center">
         Under Construction
       </p>
 
       <Icon icon="maki:construction" width="60" />
 
-    </div>
+  </div>
 
 
   </div>
   <div
-    className="relative px-10 top-40 px-40 leading-5 text-xl/7 lg:px-40 snap-always snap-start pt-8 min-h-screen"
+    className="relative px-10 top-40 leading-5 text-xl/7 lg:px-40 snap-always snap-start pt-8 min-h-screen"
     id="credits"
   >
-    <div className="flex sm:flex-row flex-col justify-center align-items-center mb-10">
-      <div className="h-2 w-3/6 bg-garden rounded justify-self-center self-center" />
-      <h2 className="text-center font-bold my-5 lg:my-0 text-4xl text-garden justify-self-center mx-4 ">
-        Credits
-      </h2>
-      <div className="h-2 bg-garden rounded w-3/6  justify-self-center self-center" />
-    </div>
+      <HeadingWithBorder text="Credits" color="garden" heading_size="h2"/>
     <ul className="text-2xl mx-18 mx-auto w-fit list-inside list-image-even">
       <li>
         <a className="font-bold" href="https://tailwindcss.com/">

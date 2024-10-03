@@ -50,7 +50,7 @@ const proficiencies = [
 
 return (
 <>
-    <div className="grid grid-cols-1 lg:grid-cols-2 grid-flow-row">
+    <div className="grid grid-cols-1 lg:grid-cols-2 grid-flow-row mb-32">
 
       <div className="flex flex-row flex-wrap gap-2 justify-center order-first lg:order-none mb-5">
         {proficiencies.map((prof, index)=>(
