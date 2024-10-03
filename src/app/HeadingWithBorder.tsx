@@ -1,5 +1,5 @@
 
-function Heading({heading_size, heading_text_classes, text}){
+function Heading({heading_size, heading_text_classes, text}: {heading_size: string, heading_text_classes: string, text:string}){
     switch(heading_size){
         case "h2":
             return (<h2 className={heading_text_classes}>{text}</h2>);
@@ -14,12 +14,12 @@ function Heading({heading_size, heading_text_classes, text}){
 
 
 
-export default function HeadingWithBorder(props){
+export default function HeadingWithBorder({color, heading_size, text}:{color:string, heading_size: string, text:string}){
 
  let border_line_classes: string = "h-2 rounded justify-self-center self-center";
     let heading_text_classes: string = "text-center font-bold my-5 lg:my-0 justify-self-center mx-4";
 
-    switch (props.color){
+    switch (color){
         case "blue":
             border_line_classes += " bg-blue";
             heading_text_classes += " text-blue"
@@ -42,7 +42,7 @@ export default function HeadingWithBorder(props){
             break;
     }
 
-    switch (props.heading_size){
+    switch (heading_size){
         case "h2":
             heading_text_classes += " text-4xl"
             border_line_classes += " w-3/6"
@@ -56,7 +56,7 @@ export default function HeadingWithBorder(props){
     return (
     <div className=" mb-10 flex sm:flex-row flex-col justify-center align-items-center">
             <div className={border_line_classes}/>
-            <Heading heading_size={props.heading_size} heading_text_classes={heading_text_classes} text={props.text} />
+            <Heading heading_size={heading_size} heading_text_classes={heading_text_classes} text={text} />
             <div className={border_line_classes}/>
     </div>
     );
