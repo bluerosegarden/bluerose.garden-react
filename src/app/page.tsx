@@ -1,7 +1,10 @@
 import Image from "next/image";
+import { Icon } from '@iconify/react';
 
 import Proficiencies from "./proficiencies";
 import ButtonLink from "./button-link";
+import HeadingWithBorder from "./HeadingWithBorder";
+
 
 let proficiencies = [
   "html",
@@ -26,7 +29,7 @@ export default function Home() {
       <div className="text-6xl md:text-8xl font-bold px-6 flex flex-col md:flex-row justify-around items-center md:items-end animate__animated animate__fadeInDown">
         <div className="text-center md:text-left">
           <h1 className="text-blue ">Blue</h1>
-          <h1 className="text-rose ">Rose's</h1>
+          <h1 className="text-rose ">Rose&apos;s</h1>
           <h1 className="text-garden ">Garden</h1>
         </div>
         <img
@@ -63,7 +66,7 @@ export default function Home() {
           </a>
         </li>
       </ol>
-      <ol className="font-bold gap-8 flex flex-col sm:flex-row navigate justify-center text-sm sm:text-md mt-10">
+      <ol className="font-bold gap-8 flex flex-col sm:flex-row navigate justify-center text-lg sm:text-2xl mt-10">
         <li>
           <a
             className="rounded-full text-white bg-magic hover:border-magic hover:border-4 hover:text-magic hover:bg-transparent p-3 transition-all hover:ease-in-out hover:text-lg"
@@ -83,99 +86,57 @@ export default function Home() {
       </ol>
     </div>
   </div>
-  <div
-    className="top-40 px-10 lg:px-40 leading-5 text-xl/7 h-fit snap-always snap-start pt-8 min-h-screen"
+<div
+className="relative px-10 lg:px-40 top-40 px-40 leading-5 text-xl/7  snap-always snap-start pt-8 min-h-screen"
     id="about"
-  >
-    <div className="flex sm:flex-row flex-col justify-center align-items-center mb-10">
-      <div className="h-2 w-3/6  bg-blue rounded justify-self-center self-center" />
-      <h2 className="text-center font-bold my-5 lg:my-0 text-4xl text-blue justify-self-center mx-4 ">
-        About
-      </h2>
-      <div className="h-2 bg-blue rounded w-3/6  justify-self-center self-center" />
-    </div>
-    <div className="flex flex-col lg:flex-row">
-      <div className="w-6/6 lg:w-4/6 text-xl">
-        <p>
-          Hello! I'm a <b>BIPOC fullstack developer</b> with a love for design,
-          scripting, and reading books. Due to my father's job growing up, I've
+>
+ <HeadingWithBorder color="rose" text="About" heading_size="h2"/>
+  <div className="grid grid-cols-1 lg:grid-cols-2 grid-flow-row">
+    <div className=" text-xl lg:text-2xl">
+      <p className=" pb-3">
+        Hello! My name is Blue Rose. I&apos;m a <b>BIPOC fullstack developer</b> with a love for design,
+          scripting, and reading books. Due to my father&apos;s job growing up, I&apos;ve
           lived everywhere from Mississippi to Alaska, Maryland to California,
-          and as a result I've experienced a wide breadth of locations.
-        </p>
-        <p>
-          I've been programming since I was 14 years old, running linux servers
+          and as a result I&apos;ve experienced a wide breadth of locations.
+      </p>
+      <p className=" pb-3">
+        I&apos;ve been programming since I was 14 years old, running linux servers
           off of old second-hand computers that my family was no longer using.
           It was only a few years later that I built my own, and not that much
           longer that I became accustomed to running server applications right
           from digitalocean droplets.
-        </p>
-        <p>I hope you enjoy your time around this site!</p>
-      </div>
-      <div className="w-6/6 lg:w-2/6 flex flex-row gap-2 justify-center order-first lg:order-none mb-5">
-      <ButtonLink icon="github" link="https://github.com/bluerosegarden"/>
-      <ButtonLink icon="email" link="mailto:contact@bluerose.garden"/>
-      </div>
+      </p>
+      <p>I hope you enjoy your time around this site!</p>
     </div>
-    <div className=" mb-10 flex sm:flex-row flex-col justify-center align-items-center">
-      <div className="h-1 w-3/6 bg-blue rounded justify-self-center self-center" />
-      <h2 className="text-center font-bold my-5 lg:my-0 text-4xl text-blue justify-self-center mx-4 ">
-        Proficiencies
-      </h2>
-      <div className="h-1 bg-blue rounded w-3/6  justify-self-center self-center" />
+    <div className=" flex flex-row gap-2 justify-center content-center order-first lg:order-none mb-5">
+        <ButtonLink icon="github" link="https://github.com/bluerosegarden"/>
+        <ButtonLink icon="email" link="mailto:contact@bluerose.garden"/>
     </div>
-
-      <Proficiencies />
   </div>
+
+  </div>
+
   <div
     className="relative px-10 lg:px-40 top-40 px-40 leading-5 text-xl/7  snap-always snap-start pt-8 min-h-screen"
     id="portfolio"
   >
-    <div className="flex sm:flex-row flex-col justify-center align-items-center mb-10 ">
-      <div className="h-2 w-3/6  bg-rose rounded justify-self-center self-center" />
-      <h2 className="text-center font-bold my-5 lg:my-0 text-4xl text-rose justify-self-center mx-4 ">
-        Portfolio
-      </h2>
-      <div className="h-2 bg-rose rounded w-3/6 justify-self-center self-center" />
-    </div>
-    <div className="text-blue text-xl stroke-blue flex flex-col md:flex-row justify-center align-items-center">
-      <svg
-        className="inline self-center"
-        xmlns="http://www.w3.org/2000/svg"
-        width={96}
-        height={96}
-        viewBox="0 0 24 24"
-      >
-        <g
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-        >
-          <rect width={20} height={8} x={2} y={6} rx={1} />
-          <path d="M17 14v7M7 14v7M17 3v3M7 3v3m3 8L2.3 6.3M14 6l7.7 7.7M8 6l8 8" />
-        </g>
-      </svg>
+      <HeadingWithBorder color="rose" text="Portfolio" heading_size="h2"/>
+
+<HeadingWithBorder color="blue" text="Proficiencies" heading_size="h3"/>
+      <Proficiencies />
+
+<HeadingWithBorder color="rose" text="Projects" heading_size="h3"/>
+        <div className="text-blue text-xl stroke-blue flex flex-col md:flex-row justify-center align-items-center">
+      <Icon icon="maki:construction" width="60" />
       <p className="inline font-bold text-3xl self-center text-center">
         Under Construction
       </p>
-      <svg
-        className="inline self-center"
-        xmlns="http://www.w3.org/2000/svg"
-        width={96}
-        height={96}
-        viewBox="0 0 24 24"
-      >
-        <g
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-        >
-          <rect width={20} height={8} x={2} y={6} rx={1} />
-          <path d="M17 14v7M7 14v7M17 3v3M7 3v3m3 8L2.3 6.3M14 6l7.7 7.7M8 6l8 8" />
-        </g>
-      </svg>
+
+      <Icon icon="maki:construction" width="60" />
+
     </div>
+
+
   </div>
   <div
     className="relative px-10 top-40 px-40 leading-5 text-xl/7 lg:px-40 snap-always snap-start pt-8 min-h-screen"
@@ -188,7 +149,7 @@ export default function Home() {
       </h2>
       <div className="h-2 bg-garden rounded w-3/6  justify-self-center self-center" />
     </div>
-    <ul className="text-2xl mx-18 sm:mx-28 mb-40">
+    <ul className="text-2xl mx-18 mx-auto w-fit list-inside list-image-even">
       <li>
         <a className="font-bold" href="https://tailwindcss.com/">
           Tailwind
@@ -223,7 +184,7 @@ export default function Home() {
       </li>
     </ul>
   </div>
-</div>
+  </div>
 
    </>
   );

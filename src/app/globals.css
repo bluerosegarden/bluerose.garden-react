@@ -1,27 +1,86 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --blue: #788AE3;
+  --rose: #EFB3DB;
+  --garden:#8FD482 ;
+  --magic: #A495DF;
+}
+html{
+background-color: #F5F6FE;
+  color:#020422;
+}
+.blue {
+color: #788ae3;
+}
+.rose {
+
+color: #EFB3DB;
+}
+.garden{
+color: #8fd482;
+}
+.custom-underline{
+border-color: #788ae3;
+}
+p{
+/* padding-bottom: 1.5rem; */
+}
+h1, h2, h3{
+
+  font-family: var(--font-comfortaa);
+
+}
+.navigate{
+text-align: center;
+}
+.nav-blue{
+  background-color: #788ae3;
+  width: fit-content;
+}
+.nav-rose{
+  background-color:#EFB3DB;
+  width: fit-content;
+}
+.nav-garden{
+  background-color: #8fd482;
+  width: fit-content;
+}
+ol a{
+
+  font-family: var(--font-comfortaa);
+  font-weight: extra-bold;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+ul li:nth-child(odd){
+list-style-image: url('/img/bullet-odd.svg')
+}
+ul li:nth-child(even){
+list-style-image: url('/img/bullet-even.svg')
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+ul li:nth-child(odd) a{
+  color: var(--blue);
+  text-decoration: underline;
+}
+ul li:nth-child(even) a{
+  color: var(--rose);
+  text-decoration: underline;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+ul li li:nth-child(odd){
+list-style-image: url('/img/subbullet-odd.svg')
+}
+ul  ul{
+
+  margin-left:2rem;
+}
+ul li li:nth-child(even){
+list-style-image: url('/img/subbullet-even.svg');
+}
+
+b{
+color: var(--blue);
 }

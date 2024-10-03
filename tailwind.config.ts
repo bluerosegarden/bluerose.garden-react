@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      listStyleImage: {
+        odd: 'url("/img/bullet-odd.png")',
+        even: 'url("/img/subbullet-even.png")',
+      },
       colors: {
         blue: '#788ae3',
         rose: '#EFB3DB',
