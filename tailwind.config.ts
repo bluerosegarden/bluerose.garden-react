@@ -9,11 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        blue: '#788ae3',
+        rose: '#EFB3DB',
+        garden: '#8fd482',
+        magic: '#A495DF',
+        whitish: '#F5F6FE',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("daisyui"),
+    require('flowbite/plugin')
+  ],
 };
 export default config;
